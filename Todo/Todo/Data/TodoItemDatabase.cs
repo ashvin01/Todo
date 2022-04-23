@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using SQLite;
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using SQLite;
 using Todo.Models;
 
 namespace Todo.Data

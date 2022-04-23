@@ -1,7 +1,5 @@
-﻿using System;
-using Todo.Views;
+﻿using Todo.Views;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Todo
 {
