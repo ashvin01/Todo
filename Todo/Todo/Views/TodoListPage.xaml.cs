@@ -9,6 +9,8 @@ namespace Todo.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TodoListPage : ContentPage
     {
+
+        TodoItemDatabase firebasedatabase = new TodoItemDatabase();
         public TodoListPage()
         {
             InitializeComponent();
@@ -17,9 +19,9 @@ namespace Todo.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-
-            TodoItemDatabase database = await TodoItemDatabase.Instance;
-            listView.ItemsSource = await database.GetItemsAsync();
+            var allPersons = await firebasedatabase.GetItemsAsync();
+            listView.ItemsSource = allPersons;
+            TodoItemPage.rcount = allPersons.Count;
         }
 
         async void OnItemAdded(object sender, EventArgs e)

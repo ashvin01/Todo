@@ -13,7 +13,6 @@ namespace Todo
                 BarTextColor = Color.White,
                 BarBackgroundColor = (Color)App.Current.Resources["primaryGreen"]
             };
-            //MainPage = new MainPage();
         }
 
         protected override void OnStart()
