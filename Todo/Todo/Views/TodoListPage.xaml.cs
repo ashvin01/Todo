@@ -19,9 +19,9 @@ namespace Todo.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            var allPersons = await firebasedatabase.GetItemsAsync();
-            listView.ItemsSource = allPersons;
-            TodoItemPage.rcount = allPersons.Count;
+            var allItems = await firebasedatabase.GetItemsAsync();
+            listView.ItemsSource = allItems;
+            TodoItemPage.rcount = allItems.Count;
         }
 
         async void OnItemAdded(object sender, EventArgs e)
