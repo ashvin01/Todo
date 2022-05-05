@@ -22,7 +22,7 @@ namespace Todo.Data
         public TodoItemDatabase()
         {
             firebase = new FirebaseClient("https://xamarinfirebasedatabase-b6202-default-rtdb.firebaseio.com/");
-            //Database = new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
+           
         }
 
         public async Task<List<TodoItem>> GetItemsAsync()
